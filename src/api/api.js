@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const axiosInstance = await axios.create({
-    baseURL:'http://localhost:8000/api'
+const axiosInstance = axios.create({
+    baseURL:'https://ruby-snail-kit.cyclic.app/api'
 })
 
 export const getCategories = async() => {
