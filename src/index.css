@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-maintheme {
+  background-color: #fbc56f;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.project-card{
+    cursor: pointer;
+}
+
+.project-card img:hover{
+  opacity: 0;
+}
