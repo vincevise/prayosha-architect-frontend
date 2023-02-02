@@ -75,7 +75,7 @@ const Project = () => {
         </div>
        <div className='border-t border-white my-6 py-6 flex flex-wrap gap-4 justify-center'>
             {data?.gallery?.map((x)=>(
-                <div className='border border-white w-60 h-40 cursor-pointer overflow-hidden' key={x}>
+                <div className='border border-white w-60 h-40 cursor-pointer overflow-hidden' key={x.fileId}>
                     <img src={x.url} alt="" className='w-full h-full'/>
                 </div>
             ))}

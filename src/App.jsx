@@ -35,13 +35,18 @@ function App() {
       <Suspense fallback={<Loading/>}>
         <Routes>
           <Route path='/' element={<><Home /><Footer/></>}/>
+          
           <Route path='/contact' element={<><Navbar/><Contact /><Footer/></>}/>
+          
           <Route path='/aboutUs' element={<><Navbar/><AboutUs /><Footer/></>}/>
+          
           <Route path='/work' element={<><Navbar/><Work /><Footer/></>}> 
           </Route>
+          
           <Route path='/work/:id' element={<><Navbar/><CategoryProject/><Footer/></>}/>
 
           <Route path='/project/:id' element={<><Navbar/><Project /><Footer/></>}/>
+          
           <Route path='/loading' element={<><Loading /></>}/>
         </Routes>
         </Suspense>
