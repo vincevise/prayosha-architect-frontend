@@ -13,7 +13,7 @@ const Project = () => {
     const {id} = useParams()
     
     const {data,isFetched, isFetching} = useQuery(id,()=>getOneProject(id))
-    console.log(data)
+    // console.log(data)
 
     if(isFetching){
         return <div className='min-h-screen pt-28 px-20 text-white '> Loading...</div>
@@ -74,7 +74,7 @@ const Project = () => {
             </div>
         </div>
        <div className='border-t border-white my-6 py-6 flex flex-wrap gap-4 justify-center'>
-            {data?.gallery?.map((x)=>(
+            {data && data?.gallery?.map((x)=>(
                 <div className='border border-white w-60 h-40 cursor-pointer overflow-hidden' key={x.fileId}>
                     <img src={x.url} alt="" className='w-full h-full'/>
                 </div>
