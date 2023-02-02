@@ -3,6 +3,7 @@ import Image8 from '../assets/240090290_133479762313709_1457220668633462537_n.jp
 import {useQuery} from 'react-query'
 import {useParams} from 'react-router-dom'
 import { getOneProject } from '../api/api'
+import Loading from './Loading'
  
 const Project = () => {
     useEffect(()=>{
@@ -16,7 +17,7 @@ const Project = () => {
     // console.log(data)
 
     if(isFetching){
-        return <div className='min-h-screen pt-28 px-20 text-white '> Loading...</div>
+        return <div className='min-h-screen  px-20 '> <Loading/></div>
     }
   return (
     <div className='min-h-screen pt-28 px-20 text-white '>
