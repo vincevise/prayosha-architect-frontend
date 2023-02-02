@@ -17,12 +17,12 @@ const Project = () => {
     // console.log(data)
 
     if(isFetching){
-        return <div className='min-h-screen  px-20 '> <Loading/></div>
+        return <div className='min-h-screen pt-28 px-20 text-white '> <Loading/></div>
     }
   return (
     <div className='min-h-screen pt-28 px-20 text-white '>
-        <div className='flex gap-6'>
-            <div className='border border-white py-2 px-4  w-1/4 [&_span]:pb-2 h-fit'>
+        <div className='flex  flex-col-reverse lg:flex-row gap-6'>
+            <div className='border border-white py-2 px-4  w-full lg:w-1/4 [&_span]:pb-2 h-fit'>
                 <span> 
                     <strong className='text-lg block text-comp-theme'>
                         {data.name}
@@ -70,7 +70,7 @@ const Project = () => {
                     </span>
                 </span>
             </div>
-            <div className='w-3/4'>
+            <div className='lg:w-3/4 w-full'>
                 <img src={data.poster.url} alt="" className='w-max-full'/>
             </div>
         </div>
