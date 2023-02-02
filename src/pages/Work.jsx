@@ -37,7 +37,7 @@ const Work = () => {
     <CategoriesBar/>
     <div className=' flex flex-wrap gap-10 items-center justify-center '>
        
-        {data.project.map((x,i)=>{
+        {data?.map((x,i)=>{
             return (
                 <Link to={`/project/${x.id}`} key={x.id}>
                 <div className=' w-56 h-56  transition-all duration-300 ease-in-out project-card cursor-pointer hover:[&_img]:opacity-0 bg-black relative hover:scale-110 '>
