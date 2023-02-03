@@ -1,0 +1,23 @@
+.underlineanimate {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .underlineanimate:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: -5px;
+    background: #fbc56f;
+    height: 1px;
+    transition-property: left right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  .underlineanimate:hover:after,
+  .underlineanimate:focus:after,
+  .underlineanimate:active:after {
+    right: 0;
+  }

@@ -49,7 +49,6 @@ const Home = () => {
 
   return (
     <>
-    <Navbar/>
     <div className='w-screen bg-white h-screen overflow-hidden  ' ref={targetRef} style={{ scrollBehavior: 'smooth', duration: '100ms' }}>
         <img src={slider[sliderState]} className='w-screen h-screen object-cover   ' alt="" />
     </div>

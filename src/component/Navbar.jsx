@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/306753727_394224766235099_745785161176947641_n.png'
+import {  Squash } from 'hamburger-react'
 
 const Navbar = () => {
     const location = useLocation()
     const[background,setBackground] = useState(false)
-    
+    const [isDropDown,setIsdropdown] = useState(false)
     function scroll(){
         // console.log(window.scrollY)
         if(window.scrollY > 0){
@@ -40,15 +41,28 @@ const Navbar = () => {
                 </p>
                 <strong className='text-comp-theme  text-2xl'>Architects</strong>
             </div>
-            <div >
+            <div className='hidden lg:block'>
                 <ul className='flex gap-5 text-comp-theme mr-2 [&_li]:hover:cursor-pointer   font-lato text-lg'>
-                    <Link to={'/work'} ><li>Projects</li></Link>
-                    <Link to={'/contact'} ><li>Contact</li></Link>
-                    <Link to={'/aboutUs'} ><li>AboutUs</li></Link>
+                    <Link to={'/work'} ><li className='underlineanimate'>Projects</li></Link>
+                    <Link to={'/contact'} ><li className='underlineanimate'>Contact</li></Link>
+                    <Link to={'/aboutUs'} ><li className='underlineanimate'>AboutUs</li></Link>
                 </ul>
+                
+            </div>
+            <div className='text-comp-theme lg:hidden' onClick={()=>setIsdropdown(!isDropDown)}>
+                <Squash toggled={isDropDown} toggle={setIsdropdown}/>
             </div>
         </div>
     </div>
+    {isDropDown && 
+    <div className='fixed pt-20 bg-black w-full z-[40] h-full'>
+        <ul className='w-full h-full flex flex-col gap-5 text-comp-theme mr-2 [&_li]:hover:cursor-pointer font-lato text-lg items-center justify-evenly'>
+            <Link to={'/work'} onClick={()=>setIsdropdown(!isDropDown)} ><li className='underlineanimate'>Projects</li></Link>
+            <Link to={'/contact'}  onClick={()=>setIsdropdown(!isDropDown)}><li className='underlineanimate'>Contact</li></Link>
+            <Link to={'/aboutUs'}  onClick={()=>setIsdropdown(!isDropDown)}><li className='underlineanimate'>AboutUs</li></Link>
+        </ul>
+    </div>
+    }
     
     </>
   )

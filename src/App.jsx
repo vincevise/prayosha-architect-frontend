@@ -34,7 +34,8 @@ function App() {
       <BrowserRouter>
       <Suspense fallback={<Loading/>}>
         <Routes>
-          <Route path='/' element={<><Home /><Footer/></>}/>
+    
+          <Route path='/' element={<><Navbar/> <Home /><Footer/></>}/>
           
           <Route path='/contact' element={<><Navbar/><Contact /><Footer/></>}/>
           

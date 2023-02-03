@@ -39,13 +39,13 @@ const Work = () => {
        
         {data?.map((x,i)=>{
             return (
-                <Link to={`/project/${x.id}`} key={x.id}>
-                <div className=' w-56 h-56  transition-all duration-300 ease-in-out project-card cursor-pointer hover:[&_img]:opacity-0 bg-black relative hover:scale-110 '>
+                <Link to={`/project/${x.id}`} key={x.id} >
+                <div className=' w-56 h-56  transition-all duration-300 ease-in-out project-card cursor-pointer hover:[&_img]:opacity-10 bg-black relative hover:scale-110 '>
                     <div className='absolute text-comp-theme w-full h-full flex flex-col items-center justify-center'>
-                        <p className='text-xl mb-2'>
+                        <p className='text-xl mb-2 '>
                             {x.name}
                         </p>
-                        <p className='text-white text-sm'>
+                        <p className='text-white text-sm '>
                             {x.location} | 2018
                         </p>
                     </div>
