@@ -6,11 +6,11 @@ import {AiOutlineFacebook} from 'react-icons/ai'
 const Footer = () => {
     
   return (
-    <div className='bg-black/80 text-white px-20 py-10 flex lg:flex-row sm:flex-col items-center justify-between border-t border-comp-theme'>
-        <div className='sm:mb-24 lg:m-0'>
+    <div className='bg-black/80 text-white px-20 py-10 flex lg:flex-row flex-col items-center justify-between border-t border-comp-theme'>
+        <div className=' mb-12 lg:m-0'>
             <img src={Logo} alt="" className='h-40'/>
         </div>
-        <div className='flex lg:flex-row sm:flex-col gap-6 lg:gap-24 mr-4'>
+        <div className='flex lg:flex-row  flex-col gap-6 lg:gap-24 mr-4'>
              <div>
                 <div className='text-lg flex flex-wrap mb-2'> CONTACT  </div> 
                 

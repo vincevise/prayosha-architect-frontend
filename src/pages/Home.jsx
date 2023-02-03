@@ -49,7 +49,7 @@ const Home = () => {
 
   return (
     <>
-    <div className='w-screen bg-white h-screen overflow-hidden  ' ref={targetRef} style={{ scrollBehavior: 'smooth', duration: '100ms' }}>
+    <div className='w-full bg-white h-screen overflow-hidden  ' ref={targetRef} style={{ scrollBehavior: 'smooth', duration: '100ms' }}>
         <img src={slider[sliderState]} className='w-screen h-screen object-cover   ' alt="" />
     </div>
     <div className='absolute flex justify-between inset-0 my-auto mx-4 items-center   [&_button]:border-comp-theme [&_button]:border [&_button]:p-4 [&_button]:rounded-full'>
