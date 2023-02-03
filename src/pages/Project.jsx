@@ -22,7 +22,7 @@ const Project = () => {
   return (
     <div className='min-h-screen pt-28 px-20 text-white '>
         <div className='flex  flex-col-reverse lg:flex-row gap-6'>
-            <div className='border border-white py-2 px-4  w-full lg:w-1/4 [&_span]:pb-2 h-fit'>
+            <div className='border border-comp-theme py-2 px-4  w-full lg:w-1/4 [&_span]:pb-2 h-fit'>
                 <span> 
                     <strong className='text-lg block text-comp-theme'>
                         {data.name}
@@ -74,9 +74,9 @@ const Project = () => {
                 <img src={data.poster.url} alt="" className='w-max-full'/>
             </div>
         </div>
-       <div className='border-t border-white my-6 py-6 flex flex-wrap gap-4 justify-center'>
+       <div className='border-t border-comp-theme my-6 py-6 flex flex-wrap gap-4 justify-center'>
             {data && data?.gallery?.map((x)=>(
-                <div className='border border-white w-60 h-40 cursor-pointer overflow-hidden' key={x.fileId}>
+                <div className='w-60 h-40 cursor-pointer overflow-hidden' key={x.fileId}>
                     <img src={x.url} alt="" className='w-full h-full'/>
                 </div>
             ))}
