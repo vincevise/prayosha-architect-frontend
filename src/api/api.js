@@ -4,8 +4,8 @@ const axiosInstance = axios.create({
     // baseURL:'https://ruby-snail-kit.cyclic.app/api'
     // baseURL:'https://prayosha-architect-backend.onrender.com/api'
     // baseURL:'http://localhost:3023/api'
-    // baseURL:'https://dark-rose-brown-bear-yoke.cyclic.app/api'
-    baseURL:'http://localhost:8000/api'
+    baseURL:'https://dark-rose-brown-bear-yoke.cyclic.app/api'
+    // baseURL:'http://localhost:8000/api'
 })
 
 export const getCategories = async() => {
