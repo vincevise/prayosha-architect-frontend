@@ -7,6 +7,11 @@ import SmoothScroll from 'smooth-scroll';
 import Loading from './Loading';
 import Navbar from '../component/Navbar';
 
+const images = [
+    { url: Image1},
+  { url: Image2 },
+]
+
 const Home = () => {
  
     const targetRef = useRef()
@@ -49,8 +54,13 @@ const Home = () => {
 
   return (
     <>
-    <div className='w-full bg-white h-screen overflow-hidden  ' ref={targetRef} style={{ scrollBehavior: 'smooth', duration: '100ms' }}>
-        <img src={slider[sliderState]} className='w-screen h-screen object-cover   ' alt="" />
+    <div className='w-full h-screen overflow-hidden  ' ref={targetRef} style={{ scrollBehavior: 'smooth', duration: '100ms' }}>
+        {images.map((slide,index)=>
+            <div className={index === sliderState ? 'slide active' : 'slide'} key={index}>
+                {sliderState === index && <img src={slide.url} className='w-screen h-screen object-cover   ' alt="" />}
+            </div>
+        )}
+        
     </div>
     <div className='absolute flex justify-between inset-0 my-auto mx-4 items-center   [&_button]:border-comp-theme [&_button]:border [&_button]:p-4 [&_button]:rounded-full'>
             <IconContext.Provider value={{ color: "#fbc56f", className: "global-class-name", size:20 }}>
@@ -58,6 +68,7 @@ const Home = () => {
                 <button className='hover:bg-main-theme transition duration-300 ease-out' value={1} onClick={(e)=>handleNext(e)}><FiArrowRight/></button>
             </IconContext.Provider>
     </div>
+     
     <div className='transition duration-300 ease-out px-20 h-screen'>
          
     </div>

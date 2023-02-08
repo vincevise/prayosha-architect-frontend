@@ -54,10 +54,10 @@ const Navbar = () => {
             </div>
         </div>
     </div>
-    {isDropDown && 
-    <div className='fixed pt-20 bg-black w-full z-[40] h-full'>
-        <ul className='w-full h-full flex flex-col gap-5 text-comp-theme mr-2 [&_li]:hover:cursor-pointer font-lato text-lg items-center justify-evenly'>
-            <Link to={'/work'} onClick={()=>setIsdropdown(!isDropDown)} ><li className='underlineanimate'>Projects</li></Link>
+    { 
+    <div className={`fixed pt-20  w-full z-[40] ${isDropDown ? 'h-full bg-black [&_ul]:flex' : 'h-0 [&_ul]:hidden' } dropdownanimate`}>
+        <ul className={` w-full h-full flex flex-col gap-5 text-comp-theme [&_li]:hover:cursor-pointer font-lato text-lg items-center justify-evenly`}>
+            <Link to={'/work'} onClick={()=>setIsdropdown(!isDropDown)} ><li className='underlineanimate slideanimate'>Projects</li></Link>
             <Link to={'/contact'}  onClick={()=>setIsdropdown(!isDropDown)}><li className='underlineanimate'>Contact</li></Link>
             <Link to={'/aboutUs'}  onClick={()=>setIsdropdown(!isDropDown)}><li className='underlineanimate'>AboutUs</li></Link>
         </ul>

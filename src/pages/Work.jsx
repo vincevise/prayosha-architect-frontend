@@ -40,7 +40,7 @@ const Work = () => {
         {data?.map((x,i)=>{
             return (
                 <Link to={`/project/${x.id}`} key={x.id} >
-                <div className=' w-56 h-56  transition-all duration-300 ease-in-out project-card cursor-pointer hover:[&_img]:opacity-10 bg-black relative hover:scale-110 '>
+                <div className=' w-56 h-56  transition-all duration-300 ease-in-out project-card cursor-pointer hover:[&_img]:opacity-0 bg-black relative hover:scale-110 '>
                     <div className='absolute text-comp-theme w-full h-full flex flex-col items-center justify-center'>
                         <p className='text-xl mb-2 '>
                             {x.name}

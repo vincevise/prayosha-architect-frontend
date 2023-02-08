@@ -21,3 +21,42 @@
   .underlineanimate:active:after {
     right: 0;
   }
+
+  .dropdownanimate{
+    transition: 300ms;
+  }
+
+ 
+
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
+}
+
+.overlaytransition{
+  transition-delay: 1s;
+  transition: 300ms;
+}
+
+.galleryanimate{
+  transition: 300ms;
+  animation: zoomIn 300ms ease-in-out;
+}
+
+@keyframes zoomIn {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
+ 
